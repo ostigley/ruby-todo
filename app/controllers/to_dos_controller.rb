@@ -4,6 +4,10 @@ class ToDosController < ApplicationController
 		# @ToDo = todo.new
 	end
 
+	def create
+		render plain: params[:to_do].inspect
+	end
+
 	def index
 		
 	end

@@ -1,6 +1,6 @@
 <h1>New To do for you?</h1>
 
-<%= form_for :to_do do |f| %>
+<%= form_for :to_do, url: to_dos_path do |f| %>
 	<p>
 		<%= f.label :task %>
 		<%= f.text_field :task %>
