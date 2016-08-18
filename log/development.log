@@ -2932,3 +2932,31 @@ Processing by ToDosController#index as HTML
 Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 17:34:00 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 30205ms (Views: 30192.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/to_dos/4" for ::ffff:127.0.0.1 at 2016-08-18 17:34:39 +1200
+Processing by ToDosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DB0BemlVM/4yynWLPtlh8TM9kaELdTpdWptv+QvJoua0+y0hgdwkQOW7kAbLTzYwEnkUR+hdaN2EOx1fEVvSaA==", "id"=>"4"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "to_dos" WHERE "to_dos"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://todo.dev/to_dos
+Completed 302 Found in 19ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 17:34:39 +1200
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 155ms (Views: 152.0ms | ActiveRecord: 0.6ms)
+
+
