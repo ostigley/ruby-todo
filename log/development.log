@@ -1808,3 +1808,855 @@ Processing by ToDosController#create as HTML
 Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateToDos (20160818030056)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "to_dos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "task" text, "complete" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160818030056"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-18 03:08:03 UTC], ["updated_at", 2016-08-18 03:08:03 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateToDos (20160818030056)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "to_dos"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160818030056"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateToDos (20160818030056)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "to_dos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "task" text, "complete" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160818030056"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateToDos (20160818030056)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "to_dos"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160818030056"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateToDos (20160818030056)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "to_dos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "task" text, "complete" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160818030056"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 15:16:16 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 269ms (Views: 259.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:16:20 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mFHDw89X4+icEG/mPsymvRD2U3hs6B974QQFKvlgSvEgt++YJ970VkthimvLWvF8MbLWno/ATfs/pHeM4/I6fw==", "to_do"=>{"task"=>"oliver again"}, "commit"=>"Save To do"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/to_dos_controller.rb:8:in `create'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.8ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 15:21:06 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:21:09 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJn/a7nVMYv7xOZD4eXoR2dNdO+AeE4+I7WCU5TGbzP0f9MwUVwmNSy1A84Uc7+GRgnxCWNQHL79FfD1jlQfvQ==", "to_do"=>{"task"=>"i try again"}, "commit"=>"Save To do"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo):
+  
+app/controllers/to_dos_controller.rb:20:in `to_do_params'
+app/controllers/to_dos_controller.rb:8:in `create'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.0ms)
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:22:15 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJn/a7nVMYv7xOZD4eXoR2dNdO+AeE4+I7WCU5TGbzP0f9MwUVwmNSy1A84Uc7+GRgnxCWNQHL79FfD1jlQfvQ==", "to_do"=>{"task"=>"i try again"}, "commit"=>"Save To do"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("task", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["task", "i try again"], ["created_at", 2016-08-18 03:22:15 UTC], ["updated_at", 2016-08-18 03:22:15 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://todo.dev/to_dos/1
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:22:16 +1200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ToDosController):
+  
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:155:in `handle'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:109:in `rescue in block (2 levels) in start'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:106:in `block (2 levels) in start'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:96:in `each'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:96:in `block in start'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:76:in `loop'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:76:in `start'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/lib/nack/server.rb:12:in `run'
+/usr/local/Cellar/pow/0.5.0/libexec/node_modules/nack/bin/nack_worker:4:in `<main>'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:27:19 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 22.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:28:01 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:28:02 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:28:44 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 100ms (Views: 79.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:28:46 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos/1" for ::ffff:127.0.0.1 at 2016-08-18 15:29:17 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:33:09 +1200
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `task' for nil:NilClass):
+    1: <p>All Tasks</p>
+    2: <ul>
+    3: 	<% @to_dos.each do |to_do| %>
+    4: 	<li><%= @to_do.task %></li>
+    5: 	<% end %>
+    6: </ul>
+  
+app/views/to_dos/index.html.erb:4:in `block in _app_views_to_dos_index_html_erb___870869927808128144_70167342155320'
+app/views/to_dos/index.html.erb:3:in `_app_views_to_dos_index_html_erb___870869927808128144_70167342155320'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.6ms)
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:33:25 +1200
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 15:33:31 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:33:37 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4wuFG4EwfX4zuqETBUblbe+g9Ib3Cq+svZYqdsKHrPJb7alAablqwOTLRJ7w0LKszuRxYBQi/SxjNljQ2BXcfA==", "to_do"=>{"task"=>"clean bench"}, "commit"=>"Save To do"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("task", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["task", "clean bench"], ["created_at", 2016-08-18 03:33:37 UTC], ["updated_at", 2016-08-18 03:33:37 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://todo.dev/to_dos/2
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/to_dos/2" for ::ffff:127.0.0.1 at 2016-08-18 15:33:37 +1200
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering to_dos/show.html.erb within layouts/application
+  Rendered to_dos/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 15:33:49 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:33:56 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DU8AVdQu5p9KRt6zQJXJlzp8axT6Oa17KYV4dV3dS0a1qSwOPKfxIZ03Oz61A55WGzju8hkR//v3JQrTR087yA==", "to_do"=>{"task"=>"wash dishes"}, "commit"=>"Save To do"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("task", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["task", "wash dishes"], ["created_at", 2016-08-18 03:33:56 UTC], ["updated_at", 2016-08-18 03:33:56 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/to_dos_controller.rb:11:in `create'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 15:34:53 +1200
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 16:08:38 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 260ms (Views: 247.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:10:38 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:10:38 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 16:10:48 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"InU9PpbzJbLKKEnBnasAxgataxWQZ5fA80woBkzAtrWakxFlfnoyDB1ZrExoPVcHJ+nu83NPxUAt7FqgVlLGOw==", "to_do"=>{"task"=>"vacuum"}, "commit"=>"Save To do"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("task", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["task", "vacuum"], ["created_at", 2016-08-18 04:10:48 UTC], ["updated_at", 2016-08-18 04:10:48 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://todo.dev/to_dos
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 16:10:48 +1200
+Processing by ToDosController#index as HTML
+  Rendering to_dos/index.html.erb within layouts/application
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:36:17 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;		 end  
+         		    ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.5ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:36:19 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;		 end  
+         		    ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.2ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:41:19 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:13: syntax error, unexpected '<'
+		<% end );@output_buffer.safe_append=' 
+		 ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:13: syntax error, unexpected '<'
+app/views/to_dos/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.9ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:41:20 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:13: syntax error, unexpected '<'
+		<% end );@output_buffer.safe_append=' 
+		 ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:13: syntax error, unexpected '<'
+app/views/to_dos/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:41:27 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.5ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:41:45 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:41:52 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.3ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:42:23 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.3ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:43:51 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:28: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.7ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:44:09 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oliverstigley/workspace/training/todo/app/views/to_dos/new.html.erb:28: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/to_dos/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+app/views/to_dos/new.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/to_dos/new.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.2ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:44:29 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New To do for you?</h1>
+    2: 
+    3: <% form_for :to_do, url: to_dos_path do |f| %>
+    4: 	<% @to_do.errors.any? %>
+    5: 		<div id="error-explanation">
+    6: 			<h2><%= pluralize(@to_do.errors.count, "error" )%></h2>
+    7: 			
+  
+app/views/to_dos/new.html.erb:4:in `block in _app_views_to_dos_new_html_erb___736980696487076669_70358979490120'
+app/views/to_dos/new.html.erb:3:in `_app_views_to_dos_new_html_erb___736980696487076669_70358979490120'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.8ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:55:29 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New To do for you?</h1>
+    2: 
+    3: <% form_for :to_do, url: to_dos_path do |f| %>
+    4: 	<% if @to_do.errors.any? %>
+    5: 		<div id="error-explanation">
+    6: 			<h2><%= pluralize(@to_do.errors.count, "error" )%></h2>
+    7: 			
+  
+app/views/to_dos/new.html.erb:4:in `block in _app_views_to_dos_new_html_erb___736980696487076669_70358979475780'
+app/views/to_dos/new.html.erb:3:in `_app_views_to_dos_new_html_erb___736980696487076669_70358979475780'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.0ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:56:57 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New To do for you?</h1>
+    2: 
+    3: <% form_for :to_do, url: to_dos_path do |f| %>
+    4: 	<% if @to_dos.errors.any? %>
+    5: 		<div id="error-explanation">
+    6: 			<h2><%= pluralize(@to_do.errors.count, "error" )%></h2>
+    7: 			
+  
+app/views/to_dos/new.html.erb:4:in `block in _app_views_to_dos_new_html_erb___736980696487076669_70358979444580'
+app/views/to_dos/new.html.erb:3:in `_app_views_to_dos_new_html_erb___736980696487076669_70358979444580'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.6ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:57:21 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New To do for you?</h1>
+    2: 
+    3: <% form_for :to_do, url: to_dos_path do |f| %>
+    4: 	<% if @to_do.errors.any? %>
+    5: 		<div id="error-explanation">
+    6: 			<h2><%= pluralize(@to_do.errors.count, "error" )%></h2>
+    7: 			
+  
+app/views/to_dos/new.html.erb:4:in `block in _app_views_to_dos_new_html_erb___736980696487076669_70358979011360'
+app/views/to_dos/new.html.erb:3:in `_app_views_to_dos_new_html_erb___736980696487076669_70358979011360'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.4ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:58:07 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 256ms (Views: 248.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:58:52 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:58:54 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:01 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:02 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:03 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:17 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:19 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:20 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:20 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:22 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New To do for you?</h1>
+    2: 
+    3: <% form_for :to_do, url: to_dos_path do |f| %>
+    4: 	<% if @to_do.errors.any? %>
+    5: 		<div id="error-explanation">
+    6: 			<h2><%= pluralize(@to_do.errors.count, "error" )%></h2>
+    7: 			
+  
+app/views/to_dos/new.html.erb:4:in `block in _app_views_to_dos_new_html_erb___736980696487076669_70359023361440'
+app/views/to_dos/new.html.erb:3:in `_app_views_to_dos_new_html_erb___736980696487076669_70359023361440'
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oliverstigley/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.0ms)
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:27 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 16:59:28 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos/new" for ::ffff:127.0.0.1 at 2016-08-18 17:00:26 +1200
+Processing by ToDosController#new as HTML
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/to_dos" for ::ffff:127.0.0.1 at 2016-08-18 17:00:29 +1200
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kF221uUPmKlKHdfzGOtVXYQ8rbXVQ/8h+eFIJ0lhR6sou5qNDYaPF51sMn7tfQKcpXgoUzZrraEnQTqBU/M3JQ==", "to_do"=>{"task"=>""}, "commit"=>"Save To do"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering to_dos/new.html.erb within layouts/application
+  Rendered to_dos/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
