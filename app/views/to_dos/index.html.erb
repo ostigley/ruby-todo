@@ -1,7 +1,7 @@
 <p>All Tasks</p>
 <ul>
 	<% @to_dos.each do |to_do| %>
-	<li><span><button><%= link_to 'Done', controller %></button></span> <%= to_do.task %></li>
+	<li><button><%= link_to 'Done', to_do_path(to_do),method: :delete,data: {confirm: 'Are you sure?'} %></button> <%= to_do.task %></li>
 	<% end %>
 </ul>
 
