@@ -3,7 +3,6 @@ class ToDosController < ApplicationController
 	def new
 		@to_do = ToDo.new
 		@projects =  Project.all
-		puts @projects
 	end
 
 	def create
