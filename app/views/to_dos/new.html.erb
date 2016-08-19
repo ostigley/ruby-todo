@@ -16,10 +16,13 @@
 
 	<p>
 		<%= f.label :task %>
-		<%= f.text_field :task %>
+		<%= f.text_field :task %><br>
+		<% projects_array = @projects.map{|project| [project.name, project.id]} %>
+		<%= f.select(:project_id, options_for_select(projects_array)) %>
 	</p>
 
 	<p>
 		<%= f.submit %>
 	</p>
 <% end %>
+<p><%= debug(params) %></p>

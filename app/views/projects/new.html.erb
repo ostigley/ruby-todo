@@ -1,0 +1,11 @@
+<h1>New project</h1>
+<h3>All Tasks need a Project!</h3>
+<p>
+<%= form_for :project, url: projects_path do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.submit %>
+<% end %>
+</p>
+
+<p><%= debug(params) %></p>

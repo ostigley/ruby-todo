@@ -2,6 +2,8 @@ class ToDosController < ApplicationController
 
 	def new
 		@to_do = ToDo.new
+		@projects =  Project.all
+		puts @projects
 	end
 
 	def create
@@ -20,6 +22,7 @@ class ToDosController < ApplicationController
 	end
 
 	def index
+		@projects = Project.all
 		@to_dos = ToDo.all
 	end
 
@@ -31,7 +34,7 @@ class ToDosController < ApplicationController
 
 	private
 		def to_do_params
-			params.require(:to_do).permit(:task)
+			params.require(:to_do).permit(:task, :project_id)
 		end
 
 
