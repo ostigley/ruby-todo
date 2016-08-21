@@ -4240,3 +4240,11 @@ Completed 200 OK in 120ms (Views: 117.5ms | ActiveRecord: 0.5ms)
 
 
   [1m[36mToDo Load (1.8ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT  "to_dos".* FROM "to_dos" ORDER BY "to_dos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
