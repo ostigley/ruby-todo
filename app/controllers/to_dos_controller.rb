@@ -28,6 +28,7 @@ class ToDosController < ApplicationController
 	def destroy
 		@to_do = ToDo.find(params[:id])
 		@to_do.destroy
+		flash[:success] = 'Nice job'
 		redirect_to to_dos_path
 	end
 

@@ -40,15 +40,18 @@ describe ToDosController do
 		end
 	end
 
+	FactoryGirl.define do
+		factory :project do
+	    name "kitchen"
+	  end
+
+	  factory :to_do do
+	  	task "clean the coffee machine"
+	  	project_id 1
+	  end
+	end
 	describe "Adding a todo" do 
-		FactoryGirl.define do
-			factory :project do
-		    name "kitchen"
-		  end
-		end
 
-
-		total_todos = ToDo.all.length
 		new_todo = { 
 			to_do: {
 				"task": "Clean the kitchen", 
@@ -57,14 +60,38 @@ describe ToDosController do
 		}
 
 		it "adds one todo to the database and redirects" do
+			total_todos = ToDo.all.length
 			project = create(:project)
 			post(:create, params: new_todo)
 			expect(ToDo.all.length).to eq(total_todos+1)
+			expect(response).to redirect_to(to_dos_path)
 		end
 
-		it "redirects to to_dos path" do 
+		it "rejects if no task in text field" do 
+			project = create(:project)
+			total_todos = ToDo.all.length
+			new_todo[:to_do][:task] = ""
+			post(:create, params: new_todo)
+			expect(ToDo.all.length).to eq(total_todos)
+			expect(response).to render_template(:new)
+			expect(assigns(:to_do).errors.count).to eq(2)
 		end
 
+	end
+
+	describe "deleting a task" do
+		it "deletes the task" do 
+			project = create(:project)
+			todo 		= create(:to_do)
+
+			todos = ToDo.all.length
+			delete :destroy, params: {id: 1}
+
+			expect(ToDo.all.length).to eq(todos-1)
+			expect(response).to redirect_to(to_dos_path)
+			expect(flash[:success]).to eq('Nice Job')
+			# p flash[:success]
+		end
 	end
 
 end

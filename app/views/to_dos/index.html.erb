@@ -2,6 +2,11 @@
 <%= link_to 'New Task', new_to_do_path %><br>
 <%= link_to 'New Project', new_project_path %><br>
 <ul>
+
+<% if flash[:success] %>
+	<div><%= flash[:success] %></div>
+<% end %>
+
 <% if @to_dos.length == 0  %>
 	<p>No jobs to do... woohooo!</p>
 <% else %>
