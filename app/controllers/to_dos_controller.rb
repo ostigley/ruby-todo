@@ -26,7 +26,6 @@ class ToDosController < ApplicationController
 		@projects = Project.all
 		@to_dos = ToDo.all
 		@users = User.all
-		# @join = Project.joins(to_dos: :user)
 	end
 
 	def destroy
