@@ -11,10 +11,10 @@
 	<p>No jobs to do... woohooo!</p>
 <% else %>
 	<% @projects.each do |project| %>
-		<% if project.to_do.length > 0 %>
+		<% if project.to_dos.length > 0 %>
 			<h4><%= project.name %></h4>
 			<ul>
-				<% project.to_do.each do |to_do| %>
+				<% project.to_dos.each do |to_do| %>
 					<li><button><%= link_to 'Done', to_do_path(to_do),method: :delete,data: {confirm: 'Are you sure?'} %></button> <%= to_do.task %></li>
 				<% end %>
 			</ul>
@@ -22,5 +22,6 @@
 		<% end %>
 	<% end %>	
 <% end %>
+
 
 

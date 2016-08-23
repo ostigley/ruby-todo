@@ -1,5 +1,6 @@
 class ToDosController < ApplicationController
-
+	before_action :authenticate_user!
+	
 	def new
 		@to_do = ToDo.new
 		@projects =  Project.all
