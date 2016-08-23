@@ -15,7 +15,7 @@
 			<h4><%= project.name %></h4>
 			<ul>
 				<% project.to_dos.each do |to_do| %>
-					<li><button><%= link_to 'Done', to_do_path(to_do),method: :delete,data: {confirm: 'Are you sure?'} %></button> <%= to_do.task %></li>
+					<li><button><%= link_to 'Done', to_do_path(to_do),method: :delete,data: {confirm: 'Are you sure?'} %></button> <%=  to_do.user.nil? ? "Mystery user" : to_do.user.email %> will <%= to_do.task %></li>
 				<% end %>
 			</ul>
 		<% else %>
@@ -23,5 +23,6 @@
 	<% end %>	
 <% end %>
 
+<%= debug(@join) %>
 
 

@@ -18,7 +18,9 @@
 		<%= f.label :task %>
 		<%= f.text_field :task %><br>
 		<% projects_array = @projects.map{|project| [project.name, project.id]} %>
+		<% users_array = @users.map{|user| [user.email, user.id]} %>
 		<%= f.select(:project_id, options_for_select(projects_array)) %>
+		<%= f.select(:user_id, options_for_select(users_array)) %>
 	</p>
 
 	<p>
