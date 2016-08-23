@@ -4,6 +4,7 @@ class ToDosController < ApplicationController
 	def new
 		@to_do = ToDo.new
 		@projects =  Project.all
+		@users = User.all
 	end
 
 	def create
@@ -24,6 +25,7 @@ class ToDosController < ApplicationController
 	def index
 		@projects = Project.all
 		@to_dos = ToDo.all
+		@users = User.all
 	end
 
 	def destroy
@@ -35,7 +37,7 @@ class ToDosController < ApplicationController
 
 	private
 		def to_do_params
-			params.require(:to_do).permit(:task, :project_id)
+			params.require(:to_do).permit(:task, :project_id, :user_id)
 		end
 
 
