@@ -1,14 +1,30 @@
 # require 'spec_helper'
 require 'rails_helper'
 
+FactoryGirl.define do
+  factory :user do
+    email "oliver@email.com"
+    password "password123"
+  end
+end
+
+
+
 describe ToDosController do 
+
+	before do
+		@user = create(:user)
+	end
 	describe "GET new" do
+		
 		it 'renders the template' do
+			sign_in @user
 			get :new
 			expect(response).to render_template('new')
 		end
 
 		it 'assigns instance variables' do 
+			sign_in @user
 			todo = ToDo.new
 			projects = Project.all
 
@@ -20,11 +36,13 @@ describe ToDosController do
 
 	describe "GET index" do
 		it 'renders the template' do
+			sign_in @user
 			get :index
 			expect(response).to render_template('index')
 		end
 
 		it "assigns @to_dos and @ projects" do
+			sign_in @user
 			project = create(:project)
 			# arrange
 			todos = ToDo.all
@@ -60,6 +78,7 @@ describe ToDosController do
 		}
 
 		it "adds one todo to the database and redirects" do
+			sign_in @user
 			total_todos = ToDo.all.length
 			project = create(:project)
 			post(:create, params: new_todo)
@@ -68,6 +87,7 @@ describe ToDosController do
 		end
 
 		it "rejects if no task in text field" do 
+			sign_in @user
 			project = create(:project)
 			total_todos = ToDo.all.length
 			new_todo[:to_do][:task] = ""
@@ -81,6 +101,7 @@ describe ToDosController do
 
 	describe "deleting a task" do
 		it "deletes the task" do 
+			sign_in @user
 			project = create(:project)
 			todo 		= create(:to_do)
 
@@ -89,7 +110,7 @@ describe ToDosController do
 
 			expect(ToDo.all.length).to eq(todos-1)
 			expect(response).to redirect_to(to_dos_path)
-			expect(flash[:success]).to eq('Nice Job')
+			expect(flash[:success]).to eq('Nice job')
 			# p flash[:success]
 		end
 	end
